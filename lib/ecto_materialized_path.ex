@@ -57,7 +57,12 @@ defmodule EctoMaterializedPath do
       def unquote(:"#{method_namespace}where_depth")(__MODULE__, depth_params) do
         EctoMaterializedPath.where_depth(__MODULE__, depth_params, unquote(:"#{column_name}"))
       end
-      def unquote(:"#{method_namespace}where_depth")(query = %Ecto.Query{ from: { _, __MODULE__ } }, depth_params) when is_list(depth_params) do
+
+      def unquote(:"#{method_namespace}where_depth")(
+            query = %Ecto.Query{from: %{source: {_, __MODULE__}}},
+            depth_params
+          )
+          when is_list(depth_params) do
         EctoMaterializedPath.where_depth(query, depth_params, unquote(:"#{column_name}"))
       end
 

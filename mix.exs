@@ -37,11 +37,9 @@ defmodule EctoMaterializedPath.Mixfile do
 
   defp deps do
     [
-     {:ecto, ">= 2.0.0"},
-
-     {:ex_machina, "~> 1.0.0", only: :test},
-
-     {:ex_doc, ">= 0.0.0", only: :dev},
+      {:ecto, ">= 3.2.2"},
+      {:ex_machina, "~> 2.3.0", only: :test},
+      {:ex_doc, "~> 0.21", only: :dev, runtime: false}
     ]
   end
 
