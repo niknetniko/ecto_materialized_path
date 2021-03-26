@@ -1,10 +1,9 @@
 defmodule EctoMaterializedPath.Path do
-  @behaviour Ecto.Type
-
   @moduledoc """
   Right now it's implemented absolutely the same as { :array, :integer }
   But things can change later
   """
+  use Ecto.Type
 
   def cast(list) when is_list(list) do
     path_is_correct? = Enum.all?(list, fn path_id -> is_integer(path_id) end)
@@ -22,5 +21,5 @@ defmodule EctoMaterializedPath.Path do
 
   def load(value), do: {:ok, value}
 
-  def type, do: EctoMaterializedPath.Path
+  def type, do: {:array, :integer}
 end
