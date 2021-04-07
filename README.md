@@ -1,9 +1,12 @@
-# `ecto_materialized_path`
+# `ecto_materialized_trail`
 
-[![Build Status](https://travis-ci.org/asiniy/ecto_materialized_path.svg?branch=master)](https://travis-ci.org/asiniy/ecto_materialized_path)
+An up-to-date fork of https://github.com/asiniy/ecto_materialized_path, which seems to be abandoned.
+If the original library gets revived, this one will be sunset.
+
+[![Elixir CI](https://github.com/niknetniko/ecto_materialized_trail/actions/workflows/elixir.yml/badge.svg)](https://github.com/niknetniko/ecto_materialized_trail/actions/workflows/elixir.yml)
 ![badge](https://img.shields.io/hexpm/v/ecto_materialized_path.svg)
 
-Allows you to store and organize your Ecto records in a tree structure (or an hierarchy). It uses a single database column, using the materialized path pattern. It exposes all the standard tree structure relations (ancestors, parent, root, children, siblings, descendants, depth) and all of them can be fetched in a single SQL query.
+Allows you to store and organize your Ecto records in a tree structure (or a hierarchy). It uses a single database column, using the materialized path pattern. It exposes all the standard tree structure relations (ancestors, parent, root, children, siblings, descendants, depth) and all of them can be fetched in a single SQL query.
 
 ## Installation
 
@@ -11,12 +14,15 @@ Allows you to store and organize your Ecto records in a tree structure (or an hi
 
 ```elixir
 def deps do
-  [{:ecto_materialized_path, "~> x.x.x"}]
+  [{:ecto_materialized_trail, "~> x.x.x"}]
 end
 ```
 
 
 ## Getting started
+
+Note: while the fork is called `ecto_materialized_trail`, it intends to be a drop-in replacement for `ecto_materialized_path`.
+As such, the names of the modules is not changed.
 
 `use EctoMaterializedPath` in your schema. It takes 2 arguments:
 
