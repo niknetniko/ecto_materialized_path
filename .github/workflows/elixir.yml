@@ -18,7 +18,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Set up Elixir
-      uses: erlef/setup-elixir@1.7.0
+      uses: erlef/setup-elixir@v1.7
       with:
         otp-version: ${{matrix.otp}}
         elixir-version: ${{matrix.elixir}}
