@@ -14,8 +14,7 @@ defmodule EctoMaterializedPath.Mixfile do
       start_permanent: Mix.env() == :prod,
       source_url: @project_url,
       homepage_url: @project_url,
-      description:
-        "Tree structure & hierarchy for ecto models. Uses the materialized path pattern",
+      description: "Tree structure & hierarchy for ecto models. Uses the materialized path pattern",
       package: package(),
       deps: deps()
     ]
