@@ -6,7 +6,7 @@ defmodule EctoMaterializedPath.Mixfile do
 
   def project do
     [
-      app: :ecto_materialized_path,
+      app: :ecto_materialized_trail,
       version: @version,
       elixir: "~> 1.8",
       elixirc_paths: elixirc_paths(Mix.env()),
