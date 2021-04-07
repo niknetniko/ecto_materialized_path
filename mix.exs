@@ -1,8 +1,8 @@
 defmodule EctoMaterializedPath.Mixfile do
   use Mix.Project
 
-  @project_url "https://github.com/asiniy/ecto_materialized_path"
-  @version "0.2.0"
+  @project_url "https://github.com/niknetniko/ecto_materialized_trail"
+  @version "0.3.0"
 
   def project do
     [
@@ -15,7 +15,7 @@ defmodule EctoMaterializedPath.Mixfile do
       source_url: @project_url,
       homepage_url: @project_url,
       description:
-        "Tree structure & hierarchy for ecto models. Ancestry, materialized path, nested set, adjacency list",
+        "Tree structure & hierarchy for ecto models. Uses the materialized path pattern",
       package: package(),
       deps: deps()
     ]
@@ -35,13 +35,11 @@ defmodule EctoMaterializedPath.Mixfile do
 
   defp package() do
     [
-      name: :ecto_materialized_path,
-      files: ["lib/**/*.ex", "mix.exs"],
-      maintainers: ["Alex Antonov"],
+      name: :ecto_materialized_trail,
+      maintainers: ["Alex Antonov", "Niko Strijbol"],
       licenses: ["Apache 2.0"],
       links: %{
-        "GitHub" => @project_url,
-        "Author's blog" => "http://asiniy.github.io/"
+        "GitHub" => @project_url
       }
     ]
   end
