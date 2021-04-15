@@ -4,7 +4,7 @@ An up-to-date fork of https://github.com/asiniy/ecto_materialized_path, which se
 If the original library gets revived, this one will be sunset.
 
 [![Elixir CI](https://github.com/niknetniko/ecto_materialized_trail/actions/workflows/elixir.yml/badge.svg)](https://github.com/niknetniko/ecto_materialized_trail/actions/workflows/elixir.yml)
-![badge](https://img.shields.io/hexpm/v/ecto_materialized_path.svg)
+[![badge](https://img.shields.io/hexpm/v/ecto_materialized_trail.svg)](https://hex.pm/packages/ecto_materialized_trail)
 
 Allows you to store and organize your Ecto records in a tree structure (or a hierarchy). It uses a single database column, using the materialized path pattern. It exposes all the standard tree structure relations (ancestors, parent, root, children, siblings, descendants, depth) and all of them can be fetched in a single SQL query.
 
