@@ -8,12 +8,12 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     name: OTP ${{matrix.otp}} / Elixir ${{matrix.elixir}}
     strategy:
       matrix:
-        otp: [ '22.2', '23.2' ]
-        elixir: [ '1.10.x', '1.11.x' ]
+        otp: [ '24.3', '25.3' ]
+        elixir: [ '1.13.x', '1.14.x' ]
     steps:
     - uses: actions/checkout@v3
     - name: Set up Elixir
@@ -32,15 +32,15 @@ jobs:
     - name: Run tests
       run: mix test
   format:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     name: Format
     steps:
       - uses: actions/checkout@v3
       - name: Set up Elixir
         uses: erlef/setup-elixir@v1.15
         with:
-          otp-version: '23.2'
-          elixir-version: '1.11.x'
+          otp-version: '25.3'
+          elixir-version: '1.14.x'
       - name: Restore dependencies cache
         uses: actions/cache@v3.0.1
         with:
@@ -52,15 +52,15 @@ jobs:
       - name: Format
         run: mix format --check-formatted
   lint:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     name: Lint
     steps:
       - uses: actions/checkout@v3
       - name: Set up Elixir
         uses: erlef/setup-elixir@v1.15
         with:
-          otp-version: '23.2'
-          elixir-version: '1.11.x'
+          otp-version: '25.3'
+          elixir-version: '1.14.x'
       - name: Restore dependencies cache
         uses: actions/cache@v3.0.1
         with:
